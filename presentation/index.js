@@ -40,7 +40,9 @@ const images = {
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  markdown: require("../assets/markdown.png"),
+  es6Logo: require("../assets/es6-logo.png"),
+  startWars: require("../assets/star-wars.jpg")
 };
 
 preloader(images);
@@ -54,26 +56,71 @@ export default class Presentation extends React.Component {
     return (
       <Spectacle theme={theme}>
         <Deck transition={["zoom", "slide"]} transitionDuration={500}>
-          <Slide transition={["zoom"]} bgColor="primary">
+          <Slide transition={["zoom"]} bgColor="#F4DF36">
             <Heading size={1} fit caps lineHeight={1} textColor="black">
-              Spectacle
+              ES6 Brown Bag
             </Heading>
-            <Heading size={1} fit caps>
-              A ReactJS Presentation Library
-            </Heading>
-            <Heading size={1} fit caps textColor="black">
-              Where You Can Write Your Decks In JSX
-            </Heading>
-            <Link href="https://github.com/FormidableLabs/spectacle">
-              <Text bold caps textColor="tertiary">View on Github</Text>
+            <Link href="https://github.com/nikolenkoanton92/es6-brown-bag">
+              <Text bold caps textColor="tertiary">View Slides on Github</Text>
             </Link>
-            <Text textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
+          </Slide>
+          <Slide transition={["slide"]} notes="Notes about goal" bgColor="#7cbb00">
+            <Heading size="2">
+              History
+            </Heading>
+            <Appear fid="1">
+              <Heading size="2">
+                Why I need es6?
+              </Heading>
+            </Appear>
+            <Appear fid="2">
+              <Heading size="2">
+                ES6 sugar
+              </Heading>
+            </Appear>
+            <Appear fid="3">
+              <Heading size="2">
+                Babel
+              </Heading>
+            </Appear>
+          </Slide>
+          <Slide bgColor="#000000">
+            <Heading size="2" textColor="#ffffff">History</Heading>
+            <Image src={images.startWars.replace("/", "")} height="440px" margin="40px 0px 0px 0px" />
+          </Slide>
+          <Slide bgColor="#ffffff">
+            <Layout textColor="#000000">
+              <Fill>
+                <Appear><ListItem>May - Mocha is invented in Netscape By Brendan Eich</ListItem></Appear>
+                <Appear><ListItem>September - Renamed to LiveScript</ListItem></Appear>
+                <Appear><ListItem>December - Renamed to Javascript (Because Java was popular)</ListItem></Appear>
+                <Appear><ListItem>1996 - JavaScript is taken to standardization in ECMA.</ListItem></Appear>
+                <Appear><ListItem>1997 - ECMA-262 (ECMAScript)</ListItem></Appear>
+                <Appear><ListItem>1998 - ECMAScript 2</ListItem></Appear>
+                <Appear><ListItem>1999 - ECMAScript 3</ListItem></Appear>
+              </Fill>
+              <Fill>
+                <Appear><ListItem>2005 - Mozilla and Macromedia started Work on ECMAScript 4, but they renamed to ECMAScript 3.1</ListItem></Appear>
+                <Appear><ListItem>2009 - Opposing parties meet in Oslo and achieve an agreement. ES3.1 is renamed to ES5</ListItem></Appear>
+                <Appear><ListItem>2015 - ES6 will be released.</ListItem></Appear>
+                <Appear><ListItem>Starting with ES6 - Version names will be based on the year of release. ES6 === ES2016 and ES7 === ES2016</ListItem></Appear>
+              </Fill>
+            </Layout>
           </Slide>
           <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
             <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>
             <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Wait what?
+              Why I need use ES6?
             </Heading>
+          </Slide>
+          <Slide transition={["zoom", "fade"]} bgColor="primary">
+            <Appear><ListItem>"Bad" Parts are fixed in ES6</ListItem></Appear>
+            <Appear><ListItem>Syntax sugar</ListItem></Appear>
+            <Appear><ListItem>ES6 JavaScript Standard</ListItem></Appear>
+            <Appear><ListItem>Async problem</ListItem></Appear>
+          </Slide>
+          <Slide transition={["zoom", "fade"]} bgColor="primary">
+            <Heading size="3">Block Scope</Heading>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
             <CodePane
