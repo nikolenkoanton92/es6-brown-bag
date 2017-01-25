@@ -1,0 +1,19 @@
+var foo = 'Hello';
+
+{
+  var foo = 'World';
+}
+
+console.log(foo); // World
+
+///////////////////////////////
+
+function abc() {
+  console.log('abc');
+}
+
+abc = function() {
+  console.log('cba');
+}
+
+abc(); // cba

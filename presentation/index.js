@@ -121,6 +121,21 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary">
             <Heading size="3">Block Scope</Heading>
+            <Heading size="5">ES5</Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/es5-block")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide>
+            <Appear><Heading size="5">ES6</Heading></Appear>
+            <Appear><Heading size="6">const and let is new var</Heading></Appear>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/es6-block")}
+              margin="20px auto"
+            />
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
             <CodePane

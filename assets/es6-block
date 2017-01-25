@@ -1,0 +1,20 @@
+let foo = 'Hello';
+
+{
+  let foo = 'World';
+}
+
+console.log(foo); // Hello
+
+//
+
+const abc = function() {
+  console.log('abc');
+}
+
+abc = function() { //Error
+  // Type Error: Assignment to constant variable
+  console.log('cba')
+}
+
+abc();
