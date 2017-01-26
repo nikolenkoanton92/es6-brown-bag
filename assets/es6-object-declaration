@@ -1,0 +1,19 @@
+let foo = 'foo';
+let abc = 'abc';
+let x = 1;
+let y = 2;
+
+let es5_object = {
+    foo: foo,
+    abc: abc,
+    x: x,
+    y: y
+};
+
+
+let es6_object = {
+    foo,
+    abc,
+    x,
+    y
+};

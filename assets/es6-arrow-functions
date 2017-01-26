@@ -1,0 +1,11 @@
+(a, b) => {
+  return a + b;
+}
+
+(a, b) => a + b;
+
+let arr = [1, 2, 3];
+
+let multiply = arr.map(el => el * 2);
+
+let evenArr = arr.filter(el => el % 2 === 0);

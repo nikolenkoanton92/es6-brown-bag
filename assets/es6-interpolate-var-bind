@@ -1,0 +1,3 @@
+let topic = 'ES6';
+let phrase = `${topic} Brown Bag`;
+

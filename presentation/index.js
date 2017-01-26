@@ -137,6 +137,71 @@ export default class Presentation extends React.Component {
               margin="20px auto"
             />
           </Slide>
+          <Slide>
+            <Heading size="5">Long string problem</Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/es5-long-string")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide>
+            <Heading size="5">ES6 String template and  interpolate</Heading>
+            <Appear>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/es6-template-string")}
+              margin="20px auto"
+            />
+            </Appear>
+            <Appear>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/es6-interpolate-var-bind")}
+              margin="20px auto"
+            />
+            </Appear>
+          </Slide>
+          <Slide>
+            <Heading size="5">ES6 Object declarations</Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/es6-object-declaration")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide>
+            <Heading size="5">ES6: Default Params</Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/es6-default-params")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide>
+            <Heading size="5">ES5: functions</Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/es5-functions")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide>
+            <Heading size="5">ES6: Arrow functions</Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/es6-arrow-functions")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide>
+            <Heading size="5">ES6: Arrow functions this lexical</Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/es6-arrow-functions-this")}
+              margin="20px auto"
+            />
+          </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
             <CodePane
               lang="jsx"
