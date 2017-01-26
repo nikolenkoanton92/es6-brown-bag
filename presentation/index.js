@@ -322,6 +322,18 @@ export default class Presentation extends React.Component {
             <Image width="460px" src={images.finish.replace("/", "")} margin="40px 10px 0px 10px" />
             <Image width="460px" src={images.callbacks.replace("/", "")} margin="40px 10px 0px 10px" />
           </Slide>
+          <Slide bgColor="#ffffff" transition={["slide", "zoom"]}>
+          <Heading size="2" margin="0px 0px 80px 0px">References</Heading>
+            <Link href="https://github.com/ericdouglas/ES6-Learning" >
+              <Text textColor="blue">ECMAScript 6 Learning Repo on Github</Text>
+            </Link>
+            <Link href="https://babeljs.io/">
+              <Text textColor="blue">Babel</Text>
+            </Link>
+            <Link href="https://github.com/FormidableLabs/spectacle">
+              <Text textColor="blue">Spectacle (ReactJS based Presentation Library)</Text>
+            </Link>
+          </Slide>
         </Deck>
       </Spectacle>
     );
