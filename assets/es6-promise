@@ -1,0 +1,15 @@
+const updateData = function() {
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(()=> resolve('slow data'), 5000);
+  });
+
+  return promise;
+}
+
+update().then(
+  slowData => {
+    console.log(slowData); // 'slow data'
+  },
+  error => {
+    //handle error
+  });

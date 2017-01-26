@@ -1,0 +1,7 @@
+(function() {
+  'use strict';
+
+  var abc = 'abc';
+})()
+
+console.log(abc); //Error not defined

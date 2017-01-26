@@ -1,0 +1,26 @@
+class Animal {
+  constructor(name) {
+    this.legs = 4;
+    this.head = 1;
+    this.name = name;
+  }
+
+  setName(name) {
+    this.name = name;
+  }
+
+  getName() {
+    return this.name;
+  }
+}
+
+let cat = new Animal('cat');
+
+class Dog extends Animal {
+  constructor() {
+    super('dog');
+  }
+}
+
+let dog = New Dog();
+

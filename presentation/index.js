@@ -42,7 +42,8 @@ const images = {
   logo: require("../assets/formidable-logo.svg"),
   markdown: require("../assets/markdown.png"),
   es6Logo: require("../assets/es6-logo.png"),
-  startWars: require("../assets/star-wars.jpg")
+  startWars: require("../assets/star-wars.jpg"),
+  browserSupport: require("../assets/es6-support.png")
 };
 
 preloader(images);
@@ -91,6 +92,7 @@ export default class Presentation extends React.Component {
           <Slide bgColor="#ffffff">
             <Layout textColor="#000000">
               <Fill>
+                <List>
                 <Appear><ListItem>May - Mocha is invented in Netscape By Brendan Eich</ListItem></Appear>
                 <Appear><ListItem>September - Renamed to LiveScript</ListItem></Appear>
                 <Appear><ListItem>December - Renamed to Javascript (Because Java was popular)</ListItem></Appear>
@@ -98,12 +100,15 @@ export default class Presentation extends React.Component {
                 <Appear><ListItem>1997 - ECMA-262 (ECMAScript)</ListItem></Appear>
                 <Appear><ListItem>1998 - ECMAScript 2</ListItem></Appear>
                 <Appear><ListItem>1999 - ECMAScript 3</ListItem></Appear>
+                </List>
               </Fill>
               <Fill>
+              <List>
                 <Appear><ListItem>2005 - Mozilla and Macromedia started Work on ECMAScript 4, but they renamed to ECMAScript 3.1</ListItem></Appear>
                 <Appear><ListItem>2009 - Opposing parties meet in Oslo and achieve an agreement. ES3.1 is renamed to ES5</ListItem></Appear>
                 <Appear><ListItem>2015 - ES6 will be released.</ListItem></Appear>
                 <Appear><ListItem>Starting with ES6 - Version names will be based on the year of release. ES6 === ES2016 and ES7 === ES2016</ListItem></Appear>
+                </List>
               </Fill>
             </Layout>
           </Slide>
@@ -114,10 +119,12 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary">
+            <List>
             <Appear><ListItem>"Bad" Parts are fixed in ES6</ListItem></Appear>
             <Appear><ListItem>Syntax sugar</ListItem></Appear>
             <Appear><ListItem>ES6 JavaScript Standard</ListItem></Appear>
             <Appear><ListItem>Async problem</ListItem></Appear>
+            </List>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary">
             <Heading size="3">Block Scope</Heading>
@@ -202,95 +209,82 @@ export default class Presentation extends React.Component {
               margin="20px auto"
             />
           </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <Slide>
+            <Heading size="5">ES6: Classes</Heading>
             <CodePane
-              lang="jsx"
-              source={require("raw!../assets/deck.example")}
+              lang="js"
+              source={require("raw!../assets/es6-classes")}
               margin="20px auto"
             />
           </Slide>
-          <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
-            <Appear fid="1">
-              <Heading size={1} caps fit textColor="primary">
-                Full Width
-              </Heading>
-            </Appear>
-            <Appear fid="2">
-              <Heading size={1} caps fit textColor="tertiary">
-                Adjustable Darkness
-              </Heading>
-            </Appear>
-            <Appear fid="3">
-              <Heading size={1} caps fit textColor="primary">
-                Background Imagery
-              </Heading>
-            </Appear>
-          </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="primary">
-            <Heading caps fit>Flexible Layouts</Heading>
-            <Layout>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Left
-                </Heading>
-              </Fill>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Right
-                </Heading>
-              </Fill>
-            </Layout>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <BlockQuote>
-              <Quote>Wonderfully formatted quotes</Quote>
-              <Cite>Ken Wheeler</Cite>
-            </BlockQuote>
-          </Slide>
-          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
-            <Heading caps fit size={1} textColor="primary">
-              Inline Markdown
-            </Heading>
-            <Markdown>
-              {`
-![Markdown Logo](${images.markdown.replace("/", "")})
-
-You can write inline images, [Markdown Links](http://commonmark.org), paragraph text and most other markdown syntax
-* Lists too!
-* With ~~strikethrough~~ and _italic_
-* And lets not forget **bold**
-              `}
-            </Markdown>
-          </Slide>
-          <Slide transition={["slide", "spin"]} bgColor="primary">
-            <Heading caps fit size={1} textColor="tertiary">
-              Smooth
-            </Heading>
-            <Heading caps fit size={1} textColor="secondary">
-              Combinable Transitions
-            </Heading>
-          </Slide>
-          <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Slide>
+            <Heading size="5">ES5: Async programming </Heading>
             <List>
-              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
-              <Appear><ListItem>Autofit text</ListItem></Appear>
-              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
-              <Appear><ListItem>React-Router navigation</ListItem></Appear>
-              <Appear><ListItem>PDF export</ListItem></Appear>
-              <Appear><ListItem>And...</ListItem></Appear>
+            <ListItem>Classic solution: callback</ListItem>
+            <ListItem>Problem: only one callback per async task</ListItem>
+            <ListItem>Problem: Nested functions create messy code</ListItem>
+            </List>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/es5-callback-hell")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide>
+            <Heading size="5">ES6: Promise </Heading>
+            <List>
+            <ListItem>Object that keeps a result of async function(waiting, resolved, rejected</ListItem>
+            <ListItem>Allow to return promise object and with them</ListItem>
+            <ListItem>flattens nested promises to avoid "callback hell"</ListItem>
+            </List>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/es6-promise")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide>
+            <Heading size="5">ES5: Modules </Heading>
+            <List>
+            <ListItem>Immediately Invoked Function Expression</ListItem>
+            <ListItem>controls variable exposure</ListItem>
+            </List>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/es5-module")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide note="Need using tool suh as browserify, jspm, webpack">
+            <Heading size="5">ES6: Modules </Heading>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/es6-module")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide>
+            <Heading>Other ES6 features</Heading>
+              <List>
+              <ListItem>Proxy</ListItem>
+              <ListItem>Iterators</ListItem>
+              <ListItem>Generators</ListItem>
+              <ListItem>Symbols</ListItem>
+              <ListItem>Map/Set, WeakMap/WeakSet</ListItem>
+              <ListItem>extended standard library (Number, Math, Array)</ListItem>
             </List>
           </Slide>
-          <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} caps fit textColor="tertiary">
-              Your presentations are interactive
-            </Heading>
-            <Interactive/>
+          <Slide>
+            <Heading>ES6 Browser Support</Heading>
+            <Image width="600px" src={images.browserSupport.replace("/", "")} margin="40px 0px 0px 0px" />
           </Slide>
-          <Slide transition={["spin", "slide"]} bgColor="tertiary">
-            <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-              Made with love in Seattle by
-            </Heading>
-            <Link href="http://www.formidablelabs.com"><Image width="100%" src={images.logo}/></Link>
+          <Slide>
+            <Heading>Babel</Heading>
+            <List>
+              <ListItem>transpile ES2015 code to es2015 code to ES6</ListItem>
+              <ListItem>transpile JSX(React) to JavaScript</ListItem>
+              <ListItem>transpile any of your cool libriry to ES6/7</ListItem>
+            </List>
           </Slide>
         </Deck>
       </Spectacle>

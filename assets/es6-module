@@ -1,0 +1,22 @@
+//play-with-numbers.js file
+
+export.getRandomNumber = function getRandomNumber() {
+  return Math.random();
+}
+
+export.sum = function sum(a, b) {
+  return a + b;
+}
+
+export default = function() {
+  return 'default func';
+}
+
+//index.js file
+
+import playWithNumber from './play-with-numbers';
+import {sum, getRandomNumber} from './play-with-numbers';
+
+import * as numbers from './play-with-numbers';
+
+numbers.sum();
