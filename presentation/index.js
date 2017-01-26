@@ -4,8 +4,6 @@ import React from "react";
 // Import Spectacle Core tags
 import {
   Appear,
-  BlockQuote,
-  Cite,
   CodePane,
   Deck,
   Fill,
@@ -15,8 +13,6 @@ import {
   Link,
   ListItem,
   List,
-  Markdown,
-  Quote,
   Slide,
   Spectacle,
   Text
@@ -37,10 +33,7 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-  city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png"),
   es6Logo: require("../assets/es6-logo.png"),
   startWars: require("../assets/star-wars.jpg"),
   browserSupport: require("../assets/es6-support.png")
