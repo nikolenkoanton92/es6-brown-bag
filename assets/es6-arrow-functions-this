@@ -1,13 +1,6 @@
 //es5
 function countByES5() {
   this.seconds = 0;
-  setInterval(function() {
-    this.seconds++;
-  }, 1000);
-}
-
-function countByES5() {
-  this.seconds = 0;
   var self = this;
   setInterval(function() {
     self.seconds++;
