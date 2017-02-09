@@ -192,6 +192,21 @@ export default class Presentation extends React.Component {
             />
             </Appear>
           </Slide>
+          <Slide bgColor="#ffffff" textColor="black">
+            <Heading textColor="black" size="5">Object destructuring</Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/es5-object-destructuring")}
+              margin="20px auto"
+            />
+            <Appear>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/es5-object-destructuring")}
+              margin="20px auto"
+            />
+            </Appear>
+          </Slide>
           <Slide bgColor="#ffffff" textColor="black" transition={["spin"]}>
             <Heading textColor="black" size="5">ES5: functions</Heading>
             <Appear>

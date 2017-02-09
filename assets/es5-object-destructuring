@@ -1,0 +1,14 @@
+class SimpleReactComponent extends Component {
+  render() {
+    const firstName = this.props.fistName;
+    const lastName = this.props.lastName;
+    const azureDisplayName = this.props.azureDisplayName;
+
+    return (
+      <div>
+        <h2>{fistName} {lastName}</h2>
+        <p>{azureDisplayName}</p>
+      </div>
+      );
+  }
+}
