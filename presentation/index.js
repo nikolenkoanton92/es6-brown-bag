@@ -202,7 +202,7 @@ export default class Presentation extends React.Component {
             <Appear>
             <CodePane
               lang="js"
-              source={require("raw!../assets/es5-object-destructuring")}
+              source={require("raw!../assets/es6-object-destructuring")}
               margin="20px auto"
             />
             </Appear>
@@ -272,8 +272,8 @@ export default class Presentation extends React.Component {
           <Slide bgColor="#ffffff" textColor="black" transition={["spin"]}>
             <Heading textColor="black" size="5">ES6: Promise </Heading>
             <List>
-            <Appear><ListItem>Object that keeps a result of async function(waiting, resolved, rejected</ListItem></Appear>
-            <Appear><ListItem>Allow to return promise object and with them</ListItem></Appear>
+            <Appear><ListItem>Object that keeps a result of async function(waiting, resolved, rejected)</ListItem></Appear>
+            <Appear><ListItem>Allow to return promise object and work with them</ListItem></Appear>
             <Appear><ListItem>flattens nested promises to avoid "callback hell"</ListItem></Appear>
             </List>
             <Appear>
@@ -324,7 +324,7 @@ export default class Presentation extends React.Component {
           <Slide bgColor="#ffffff" textColor="black">
             <Heading textColor="black">Babel</Heading>
             <List>
-            <Appear><ListItem>transpile ES2015 code to es2015 code to ES6</ListItem></Appear>
+            <Appear><ListItem>transpile ES2015 to ES6</ListItem></Appear>
             <Appear><ListItem>transpile JSX(React) to JavaScript</ListItem></Appear>
             <Appear><ListItem>transpile any of your cool libriry to ES6/7</ListItem></Appear>
             </List>

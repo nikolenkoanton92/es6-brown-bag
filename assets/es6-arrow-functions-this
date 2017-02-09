@@ -1,21 +1,18 @@
 //es5
-function countByES5() {
-  this.seconds = 0;
+Boom.prototype.incTime = function () {
   var self = this;
   setInterval(function() {
     self.seconds++;
   }, 1000);
 }
 
-function countByES5() {
-  this.seconds = 0;
+Boom.prototype.incTime = function () {
   setInterval(function() {
     this.seconds++;
   }.bind(this), 1000);
 }
 
 //es6
-function countByES6() {
-  this.seconds = 0;
+Boom.prototype.incTime = function () {
   setInterval(()=> this.seconds++, 1000);
 };
