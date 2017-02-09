@@ -60,7 +60,7 @@ export default class Presentation extends React.Component {
               <Text bold caps textColor="tertiary">View Slides on Github</Text>
             </Link>
           </Slide>
-          <Slide transition={["slide"]} notes="Notes about goal" bgColor="#7cbb00">
+          <Slide transition={["slide"]} notes="" bgColor="#7cbb00">
             <Heading size="2">
               History
             </Heading>
@@ -84,7 +84,7 @@ export default class Presentation extends React.Component {
             <Heading size="2" textColor="#ffffff">History</Heading>
             <Image src={images.startWars.replace("/", "")} height="440px" margin="40px 0px 0px 0px" />
           </Slide>
-          <Slide bgColor="#ffffff" transition={["zoom"]}>
+          <Slide bgColor="#ffffff" transition={["zoom"]} notes="JavaScript, not to be confused with Java, was created in 10 days in May 1995 by Brendan Eich, then working at Netscape and now of Mozilla.">
             <Layout textColor="#000000">
               <Fill>
                 <List>
@@ -111,7 +111,7 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Starting with ES6 - Version names will be based on the year of release. ES6 === ES2016 and ES7 === ES2016</ListItem></Appear>
             </List>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+          <Slide transition={["slide"]} bgColor="black" notes="">
             <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>
             <Heading size={2} caps fit textColor="primary" textFont="primary">
               Why I need use ES6?
@@ -156,7 +156,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
           <Slide bgColor="#ffffff" textColor="black">
-            <Heading size="5">ES6 String template and  interpolate</Heading>
+            <Heading size="5">ES6 String template and interpolate</Heading>
             <Appear>
             <CodePane
               lang="js"
@@ -228,19 +228,19 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
           <Slide bgColor="#ffffff" textColor="black" transition={["spin"]}>
-            <Heading textColor="black" size="5">ES6: Arrow functions this lexical</Heading>
+            <Heading textColor="black" size="6">ES6: Arrow functions this lexical</Heading>
             <Appear>
             <CodePane
               lang="js"
               source={require("raw!../assets/es6-arrow-functions-this-incorrect")}
-              margin="20px auto"
+              margin="5px auto"
             />
             </Appear>
             <Appear>
             <CodePane
               lang="js"
               source={require("raw!../assets/es6-arrow-functions-this")}
-              margin="20px auto"
+              margin="5px auto"
             />
             </Appear>
           </Slide>

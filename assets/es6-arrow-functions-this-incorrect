@@ -1,7 +1,13 @@
 //es5
-function countByES5() {
+function Foo() {
   this.seconds = 0;
-  setInterval(function() {
+}
+
+Boom.prototype.incTime = function () {
+   setInterval(function() {
     this.seconds++;
   }, 1000);
-}
+};
+
+var foo = new Foo();
+foo.incTime();
