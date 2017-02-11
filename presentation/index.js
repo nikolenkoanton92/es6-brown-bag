@@ -107,8 +107,8 @@ export default class Presentation extends React.Component {
             <List>
               <Appear><ListItem>2005 - Mozilla and Macromedia started Work on ECMAScript 4, but they renamed to ECMAScript 3.1</ListItem></Appear>
               <Appear><ListItem>2009 - Opposing parties meet in Oslo and achieve an agreement. ES3.1 is renamed to ES5</ListItem></Appear>
-              <Appear><ListItem>2015 - ES6 will be released.</ListItem></Appear>
-              <Appear><ListItem>Starting with ES6 - Version names will be based on the year of release. ES6 === ES2016 and ES7 === ES2016</ListItem></Appear>
+              <Appear><ListItem>2015 - ES6 was released.</ListItem></Appear>
+              <Appear><ListItem>Starting with ES6 - Version names will be based on the year of release. ES6 === ES2015 and ES7 === ES2016</ListItem></Appear>
             </List>
           </Slide>
           <Slide transition={["slide"]} bgColor="black" notes="">
